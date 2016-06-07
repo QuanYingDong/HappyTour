@@ -1,0 +1,101 @@
+@charset "uft-8";
+
+
+/*
+ * 主色调
+ */
+@main-color: firebrick;
+
+.text-main {
+  color: @main-color;
+}
+
+.bg-main {
+  color: white;
+  background-color: @main-color;
+}
+
+
+
+/*
+ * 
+ */
+h3 {
+  margin: 0px;
+  padding: 10px;
+  font-size: 46px;
+  text-align: center;
+}
+
+
+
+
+
+
+/*
+ * components
+ */
+.banner {
+  padding-top: 20px;
+  min-height: 600px;
+  background: url('../../Img/banner/banner00.jpg') no-repeat;
+  background-size: cover;
+}
+
+
+
+.cube {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+  .cube-title {
+    
+    p {
+      margin: 0px;
+      padding: 20px 30px;
+      font-size: 20px;
+    }
+  }
+  .cube-img {
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .cube-img img{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /*
+   *  仅最外层的cube需要加10px的margin-bottom
+   */
+  .cube {
+    margin-bottom: 10px;
+    .cube {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+.carousel-custom{
+  position: relative;
+  margin-top: 10px;
+  padding-top: 20px;
+  border: 1px grey solid;
+  border-radius: 10px;
+};
+.carousel-custom-box {
+  
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  .carousel-custom-wrap {
+    position: relative;
+    left: 0px;
+  }
+  .carousel-custom-item {
+    display: inline-block;
+    width: 300px;
+  }
+}
